@@ -1,27 +1,20 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 
-function Question({question}) {
-    const [answers, setAnswers] = useState([])
-
-    useEffect(() => {
-        setAnswers([...question.incorrect_answers, question.correct_answer ])
-    },[])
+function Question({question, question_id, clickHandler}) {
     
-    const clickHandler = (event) =>{
-        console.log(event.target)
-        console.log("click")
-    }
-    const elements = answers.map((answer,idx) => (       
+    
+
+    const elements = question.answers.map((answer,idx) => (       
         <input
             key={idx} 
             type="button"
             id="unemployed"
             name='employment'
-            value={answer}
+            value={answer.name}
             // onChange={handleChange}
             // checked={formData.employment === "unemployed"}
-            className='opt'
-            onClick={clickHandler}
+            className={answer.isActive ? 'opt active': 'opt'}
+            onClick={() => clickHandler(question_id, idx)}
         />
     ))
     return (

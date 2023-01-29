@@ -64,6 +64,11 @@ body {
   cursor: pointer;
 }
 
+.active{
+  background-color: #293264;
+  color: white;
+}
+
 .q-text{
   font-size: 1.8rem;
   color: #293264;

@@ -43,7 +43,7 @@ function App() {
       const answers = item.incorrect_answers.map(answer => (
           { name: decodeHtml(answer), isActive:false, isCorrect:false}
         ))
-      const correctAns = {name: item.correct_answer, isActive:false, isCorrect:true
+      const correctAns = {name: decodeHtml(item.correct_answer), isActive:false, isCorrect:true
       }
       answers.splice(Math.floor(Math.random() * 5),0, correctAns)
 

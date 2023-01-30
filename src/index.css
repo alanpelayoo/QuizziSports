@@ -48,6 +48,7 @@ body {
   padding: 17px 28px;
   border: none;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .opt{
@@ -66,6 +67,16 @@ body {
 
 .active{
   background-color: #293264;
+  color: white;
+}
+
+.correct{
+  background-color: green;
+  color: white;
+}
+
+.incorrect{
+  background-color: red;
   color: white;
 }
 
@@ -91,4 +102,9 @@ hr{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.flex{
+  display: flex;
+  margin-top: 30px;
 }

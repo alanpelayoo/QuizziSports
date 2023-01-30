@@ -71,13 +71,13 @@ body {
 }
 
 .correct{
-  background-color: green;
-  color: white;
+  background-color:#94D7A2;;
+  color:  #293264;
 }
 
 .incorrect{
-  background-color: red;
-  color: white;
+  background-color: #F8BCBC;
+  color: #293264;
 }
 
 .q-text{
